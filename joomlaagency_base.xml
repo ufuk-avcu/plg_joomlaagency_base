@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="4.0" type="plugin" group="system" method="upgrade">
+    <name>plg_system_joomlaagency_base</name>
+    <creationDate>March 26, 2023</creationDate>
+    <author>Joomla Agentur - http://www.joomla-agentur.de</author>
+    <license>GNU General Public License version 2 or later</license>
+    <version>0.1.0</version>
+    <description>This Plugin connects to customfields with each other.</description>
+    <files>
+        <filename plugin="joomlaagency_base">joomlaagency_base.php</filename>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+				<field name="child_service_id" value_field="title" type="sql" label="Child Service ID" query="SELECT id AS value, title FROM #__fields WHERE type = 'articles'" ><option value="">Please select your option</option></field>
+				<field name="parent_target_id" value_field="title" type="sql" label="Parent Service ID" query="SELECT id AS value, title FROM #__fields WHERE type = 'articles'" ><option value="">Please select your option</option></field>
+				<field name="frontendreplacements" type="subform" multiple="true" label="Ersetzungen" description="Fügen Sie die zu ersetzenden Wörter und ihre Ersatzwörter hinzu.">
+                    <form>
+						<field name="search" type="text" label="Zu suchendes Wort" description="Geben Sie das Wort ein, das ersetzt werden soll." filter="raw" />
+						<field name="replace" type="text" label="Ersetzen durch" description="Geben Sie das Wort ein, durch das das zu suchende Wort ersetzt werden soll." filter="raw" />
+                    </form>
+                </field>
+				
+				<field name="backendlabelreplacements" type="subform" multiple="true" label="Backend Labels ersetzen" description="Fügen Sie die zu ersetzenden Wörter und ihre Ersatzwörter hinzu.">
+                    <form>
+						<field name="customfieldparent" value_field="title" type="sql" label="Child Service ID" query="SELECT name AS value, title FROM #__fields WHERE type = 'subform' ORDER BY title ASC" ><option value="">Please select your option</option></field>
+						<field name="customfieldsubform" value_field="title" type="sql" label="Child Service ID" query="SELECT id AS value, title FROM #__fields WHERE only_use_in_subform = '1'  ORDER BY title ASC" ><option value="">Please select your option</option></field>
+						<field name="replace" type="text" label="Ersetzen durch" description="Geben Sie das Wort ein, durch das das zu suchende Wort ersetzt werden soll." filter="raw" />
+                    </form>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
+ 
+ 

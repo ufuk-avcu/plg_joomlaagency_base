@@ -1,0 +1,33 @@
+#articleList tr .has-context > div > *,
+#categoryList tr [scope^="row"] > div,
+#itemList [scope^="row"] > div{margin-left:10px;}
+
+#articleList tr .has-context > div > a,		
+#categoryList tr .has-context > div > a,
+#itemList tr .has-context > div > a{width:55%;float:left;}
+
+#articleList tr .has-context > div > .small,
+#categoryList tr .has-context > div > .small,
+#itemList tr .has-context > div > .small{font-size:14px;color:#aaa;float:left;width:20%;}
+
+#articleList td,#articleList th,#categoryList td,#categoryList th,
+#itemList [scope^="row"],
+#itemList td,
+#itemList th{padding:4px;font-size:14px;}
+
+
+
+
+table thead th{font-size:10px;font-weight:normal;max-width:50px;overflow:hidden;}
+.table tbody .itemnumber a.btn, .table tbody .itemnumber span.btn {padding: .0rem .5rem;}
+.table tr:hover td, .table tr:hover th{background:#f5f5f5;}
+
+.subform-repeatable-container td input[type=text]{width:100%;}
+.subform-repeatable-container td textarea{width:100%;}
+#subfieldList_jform_com_fields_content_creator th{max-width:33% !important;}
+
+.com_content.view-article .form-grid{}
+.com_content.view-article .form-grid > .control-group{display:block;}
+.com_content.view-article .form-grid > .control-group > .control-label > label{font-weight:bold;font-size:22px;}
+.com_content.view-article div.subform-repeatable-group{margin-top:10px;}
+.com_content.view-article input{width:100%;min-width: 16px;min-height: 16px;}
